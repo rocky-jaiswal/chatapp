@@ -1,0 +1,8 @@
+topics:
+  /topics/message_topic:
+    durable: false
+
+messaging:
+  /topics/message_topic: 
+    - DBLogger
+    - SocketNotifier

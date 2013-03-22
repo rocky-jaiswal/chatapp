@@ -1,0 +1,19 @@
+<div class="large-12 columns">
+  <h3>My Accessible Rooms</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @accessible_chatrooms.each do |aroom| %>
+        <tr>
+          <td><%= aroom.name %></td>
+          <td><%= link_to "Chat", chat_path(aroom.id), :class => "button" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

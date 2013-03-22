@@ -1,0 +1,38 @@
+<div id="chat-page">
+  <div class="row">
+    <div class="large-12 columns">
+      <div>
+        <h2>Let's Chat</h2>
+        <input type="hidden" id="channel" value="<%= @chatroom.channel %>">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-9 columns">
+      <div class="chat-area">
+        <% @chathistory.each do |cm| %>
+          <p>
+            <span class="ts"><%= cm.timestamp %></span>
+            <span class="user"><%= cm.user_email %></span>
+            <span class="msg"><%= cm.body %></span>
+          </p>
+        <% end %>
+      </div>
+    </div>
+    <div class="large-3 columns">
+      <div class="participants-area">
+        <p class="green">Users</p>
+        <% @active_users.each do |user| %>
+          <p><%= user.email %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-9 columns">
+      <div class="type-area">
+        <textarea id="chat-message"></textarea>
+      </div>
+    </div>
+  </div>
+</div>

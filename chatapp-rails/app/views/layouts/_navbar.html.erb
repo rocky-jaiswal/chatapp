@@ -1,0 +1,17 @@
+<div class="contain-to-grid">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">ChatApp</a></h1>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <% if user_signed_in? %>
+          <li class="divider hide-for-small"></li>
+          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+        <% end %>
+      </ul>
+    </section>
+  </nav>
+</div>

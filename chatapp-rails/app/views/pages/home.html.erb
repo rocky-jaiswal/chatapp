@@ -1,0 +1,18 @@
+<div id="home-page">
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Welcome <%= current_user.email %></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <%= link_to "Create Chat Room", new_chat_rooms_path, :class => "button" %>
+    </div>
+  </div>
+  <div class="row">
+    <%= render "created_rooms" %>
+  </div>
+  <div class="row">
+    <%= render "accessible_rooms" %>
+  </div>
+</div>

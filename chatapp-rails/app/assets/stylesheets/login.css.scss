@@ -1,0 +1,7 @@
+@import "bourbon";
+@import "_colors";
+
+.border-right {
+  border-right: 1px dashed $grayDark;
+  height: 380px;
+}

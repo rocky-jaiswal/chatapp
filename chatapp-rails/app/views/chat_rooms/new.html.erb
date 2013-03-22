@@ -1,0 +1,22 @@
+<div id="create-chat-page">
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Create a Chat Room</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-8 columns">
+      <% if @chatroom && @chatroom.errors.any? %>
+        <div class="alert">
+          <% @chatroom.errors.full_messages.each do |msg| %>
+            <p><%= msg %></p>
+          <% end %>
+        </div>
+      <% end %>
+      <%= simple_form_for @chatroom do |f| %>
+        <%= f.input  :name %>
+        <%= f.button :submit, :class => "button" %>
+      <% end %>
+    </div>
+  </div>
+</div>

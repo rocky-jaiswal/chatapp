@@ -1,0 +1,18 @@
+@import "_colors";
+@import "foundation";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body {
+  background-image: url(/assets/white_wall_hash.png);
+  background-position: initial initial;
+  background-repeat: initial initial;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+.logout {
+  padding: 15px 20px 15px;
+}

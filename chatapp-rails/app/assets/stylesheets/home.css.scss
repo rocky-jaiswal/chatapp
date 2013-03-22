@@ -1,0 +1,11 @@
+@import "bourbon";
+@import "_colors";
+
+.red {
+  background-color: $red;
+  border-color: darken($red, 20%);
+}
+
+.green {
+  background-color: $green;
+}

@@ -1,0 +1,42 @@
+@import "_colors";
+@import "bourbon";
+
+.chat-area {
+  border: 1px solid $gray;
+  height: 500px;
+  padding: 5px;
+  margin-bottom: 5px;
+  overflow: scroll;
+  .ts {
+    color: $grayLight;
+    margin-right: 2px;
+  }
+  .user {
+    color: $blue;
+    margin-right: 2px;
+  }
+  .msg {
+    color: #2F2F2F;
+  }
+}
+
+.participants-area {
+  border: 1px solid $gray;
+  height: 200px;
+  padding: 5px;
+
+  .green {
+    background-color: $green;
+    padding-left: 5px;
+  }
+}
+
+.type-area {
+  border: 1px solid $gray;
+  height: 100px;
+  padding: 5px;
+}
+
+.spacer {
+  height: 15px;
+}

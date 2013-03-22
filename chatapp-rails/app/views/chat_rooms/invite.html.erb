@@ -1,0 +1,17 @@
+<div id="invite-page">
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>Invite a user</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-8 columns">
+      <%= form_tag(post_invite_path) do %>
+        <%= label_tag(:user_email, "Email:") %>
+        <%= text_field_tag(:user_email) %>
+        <%= hidden_field_tag(:chat_room_id, @chatroom.id) %>
+        <%= submit_tag "Invite", :class => "button" %>
+      <% end %>
+    </div>
+  </div>
+</div>

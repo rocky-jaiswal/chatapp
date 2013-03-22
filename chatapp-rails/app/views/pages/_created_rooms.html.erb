@@ -1,0 +1,23 @@
+<div class="large-12 columns">
+  <h3>My Created Rooms</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Action</th>
+        <th>Invite</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @owned_chatrooms.each do |oroom| %>
+        <tr>
+          <td><%= oroom.name %></td>
+          <td><%= link_to "Chat", chat_path(oroom.id), :class => "button" %></td>
+          <td><%= link_to "Invite Users", invite_path(oroom.id), :class => "button green"%></td>
+          <td><%= link_to "Delete", delete_chat_room_path(oroom.id), :method => :delete, data: { confirm: 'Are you sure?' }, :class => "button red" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

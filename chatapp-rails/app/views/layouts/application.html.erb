@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+    <title>ChatApp</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <script data-main="/assets/application.js" src="/assets/lib/require/require-jquery.js"></script>
+    <%= yield :head %>
+  </head>
+  <body>
+    <div class="container">
+      <%= render "layouts/navbar" %>
+      <div class="row">
+        <div class="large-12 column">
+          <%= render "layouts/messages" %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
